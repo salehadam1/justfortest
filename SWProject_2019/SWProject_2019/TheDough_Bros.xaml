@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SWProject_2019.TheDough_Bros"
+             BackgroundColor="Black">
+    <!--thi page for The Dough Bros -->
+    <ContentPage.Content>
+        <!--creat 6 grid row and one colum  -->
+        <!--different height size for each grid row as each row hold different info -->
+        <!--one size of grid colum -->
+        <Grid x:Name="theDough"
+          HorizontalOptions="Center"
+          WidthRequest="300"
+              Margin="5,5,5,5"
+               BackgroundColor="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <!--in this grid hold and image take for heading app -->
+            <Grid  Grid.Row="0" Grid.Column="0">
+                <Image  x:Name="stwieim" WidthRequest="300" HeightRequest="600" Source="The_Dough.jpg">
+                    <!--  <Image.Source>
+                        <OnPlatform x:TypeArguments ="FileImageSource">
+                            <On Platform="UWP" Value="Images/The_Dough.jpg" />
+                             <On Platform="Android" Value="Stewie.png" />  
+                        </OnPlatform>
+                    </Image.Source> -->
+                </Image>
+            </Grid>
+
+            <!--from grid row 1 (2) till grid row 5 (6) hold lable text about the hotel and some small menu that the user have to chose one of them-->
+            <Label x:Name="tex1" Grid.Row="1" Grid.Column="0" Text="Brothers Eugene and Ronan Greaney, and their childhood friend" TextColor="White"/>
+            <Label x:Name="tex2" Grid.Row="2" Grid.Column="0" Text="Laurence Enright started a cult following from their pizza van in Moycullen market and achieved huge success at the Galway Food Festival before setting up the pop-up store in Abbeygate Street which is now a permanent Galway fixture." TextColor="White"/>
+            <Label x:Name="tex3" Grid.Row="3" Grid.Column="0" Text="They use the very finest ingredients, the all important dough is made from caputo flour from Naples to achieve the unmistakable taste of an Italian pizza" TextColor="White"/>
+            <Label x:Name="tex4" Grid.Row="4" Grid.Column="0" Text="With favourites like Hail Caesar Pizza with Lemon chicken, smoked pancetta, fresh rocket, croutons, homemade caesar dressing and parmesan and the Posh Pepperoni Pizza with Balsamic red onion, spicy jalapeno pepper." TextColor="White"/>
+            <Button x:Name="Menu" Grid.Row="5" Grid.Column="0" Text="Check Menu" TextColor="White" Clicked="Menu_Clicked" BackgroundColor="Blue"/>
+            <Button x:Name="Eyre" Grid.Row="6" Grid.Column="0" Text="link to Restaurant" TextColor="White" Clicked="Eyre_Clicked" BackgroundColor="Blue"/>
+            <!--back button-->
+            <Button x:Name="The_dough" Grid.Row="7" Grid.Column="0" Text="Back" TextColor="White" BackgroundColor="Red" Clicked="The_dough_Clicked"></Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

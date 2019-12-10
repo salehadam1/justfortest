@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SWProject_2019.Nightlife"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <Grid x:Name="nightlife"
+          HorizontalOptions="Center"
+          WidthRequest="300"
+               BackgroundColor="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition />
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+
+            <Grid x:Name="Image" Margin="0,10"
+              HorizontalOptions="Center"
+               Grid.Row="0" Grid.Column="0">
+
+                <Image  x:Name="Nightlife1" HeightRequest="400" Source="nightlife.jpg">
+                    <!--  <Image.Source>
+                        <OnPlatform x:TypeArguments ="FileImageSource">
+                            <On Platform="UWP" Value="Images/nightlife.jpg" />
+                             <On Platform="Android" Value="Stewie.png" />  
+                        </OnPlatform>
+                    </Image.Source> -->
+                </Image>
+            </Grid>
+
+
+
+
+            <!-- Margin="0,0,0,0"-->
+            
+            <Grid x:Name="contenr"
+          Grid.Row="1" Grid.Column="0"
+          HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="Taaffes_Bar" Text="Taaffes Bar" TextColor="White"
+                 Grid.Row="0" Grid.Column="0"
+                    WidthRequest="150"
+                  BackgroundColor="Blue"
+                 Clicked="Taaffes_Bar_Clicked"/>
+
+                <Button x:Name="Tig_Coili" Text="Tig Coili" TextColor="White"
+                 Grid.Row="0" Grid.Column="1"
+                    WidthRequest="150"
+                    BackgroundColor="Blue"
+                 Clicked="Tig_Coili_Clicked"/>
+
+                <Button x:Name="The_Front_Door" Text="The Front Doort" TextColor="White"
+                 Grid.Row="1" Grid.Column="0"
+                    WidthRequest="150"
+                    BackgroundColor="Blue"
+                 Clicked="The_Front_Door_Clicked"/>
+                <Button x:Name="The_Quays" Text="The Quays" TextColor="White"
+                 Grid.Row="1" Grid.Column="1"
+                    WidthRequest="150"
+                    BackgroundColor="Blue"
+                 Clicked="The_Quays_Clicked"/>
+            </Grid>
+
+            <!--button to return back to main page-->
+            <Button x:Name="fortest"
+                  Grid.Row="2" Grid.Column="0"
+                    Text="Back"
+                    TextColor="White"
+                    BackgroundColor="red"
+                    Clicked="Fortest_Clicked">
+            </Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

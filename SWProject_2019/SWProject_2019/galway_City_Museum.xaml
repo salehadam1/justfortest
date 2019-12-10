@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SWProject_2019.galway_City_Museum"
+             BackgroundColor="Black">
+    <!--thi page for galway City Museum -->
+    <ContentPage.Content>
+        <!--creat 6 grid row and one colum  -->
+        <!--different height size for each grid row as each row hold different info -->
+        <!--one size of grid colum -->
+        <Grid x:Name="Galway_museum"
+          HorizontalOptions="Center"
+          WidthRequest="300"
+              Margin="5,5,5,5"
+               BackgroundColor="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <!--in this grid hold and image take for heading app -->
+            <Grid  Grid.Row="0" Grid.Column="0">
+                <Image  x:Name="stwieim" WidthRequest="300" HeightRequest="600" Source="Galway_city_Museum.jpg">
+                    <!--  <Image.Source>
+                        <OnPlatform x:TypeArguments ="FileImageSource">
+                            <On Platform="UWP" Value="Images/Galway_city_Museum.jpg" />
+                             <On Platform="Android" Value="Stewie.png" />  
+                        </OnPlatform>
+                    </Image.Source>-->
+                </Image>
+            </Grid>
+
+            <!--from grid row 1 (2) till grid row 5 (6) hold lable text about the hotel and some small menu that the user have to chose one of them-->
+            <Label x:Name="tex1" Grid.Row="1" Grid.Column="0" Text="The Galway City Museum is where visitors can learn about the history of the Claddagh" TextColor="White"/>
+            <Label x:Name="tex2" Grid.Row="2" Grid.Column="0" Text=" Galway's Spanish influences, British control and invading Vikings. This spot has a rotating range of exhibits that keep things riveting" TextColor="White"/>
+            <Label x:Name="tex3" Grid.Row="3" Grid.Column="0" Text=" It does mean you can never quite predict what'll be there" TextColor="White"/>
+            <Label x:Name="tex4" Grid.Row="4" Grid.Column="0" Text=" but they tend to bring the city to life. There are plenty more museums to enjoy too." TextColor="White"/>
+            <Button x:Name="galway_MU" Grid.Row="5" Grid.Column="0" Text="link to map" TextColor="White" Clicked="Galway_MU_Clicked" BackgroundColor="Blue"/>
+
+
+            <!--back button-->
+            <Button x:Name="back" Text="Back" TextColor="White" BackgroundColor="Red"
+                    Grid.Row="6" Grid.Column="0"
+                    Clicked="Back_Clicked"></Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

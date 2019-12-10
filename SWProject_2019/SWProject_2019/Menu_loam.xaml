@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SWProject_2019.Menu_loam"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <!-- this holds the Loam 
+                 menu of 3 columns, 10 rows
+                 with background color -->
+        <Grid x:Name="Loam" BackgroundColor="black"
+              Margin="5,5,5,5"  
+             WidthRequest="330"
+             HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+
+            <!--from the grid 1 to grid 8 its holad for each grid 1 row and 3 colum
+                the 3 colum hold label text for the Menu infor and price and Enter box to user chose the Qunt
+                and the last colum hold button to save the number of Qunt that the user enter -->
+            <Label Grid.Row="0" Grid.Column="0" Text="Menu" TextColor="White" HorizontalOptions="Center"/>
+            <Label Grid.Row="0" Grid.Column="1" Text="Qunt" TextColor="White" HorizontalOptions="Center"/>
+            <Label Grid.Row="0" Grid.Column="2" Text="ADD" TextColor="White" HorizontalOptions="Center"/>
+
+            <Label Grid.Row="1" Grid.Column="0" Text="Today's local charcuterie €16" TextColor="White" HorizontalOptions="Center"/>
+            <Label Grid.Row="2" Grid.Column="0" Text="Connemara air-dried lamb" TextColor="White" HorizontalOptions="Center"/>
+            <Entry x:Name="Qub1"  Grid.Row="2" Grid.Column="1" TextColor="White" Placeholder="0" Text="{Binding Path=name, Mode=TwoWay}" HorizontalOptions="Center"/>
+            <Button x:Name="add" BackgroundColor="Blue" Grid.Row="2" Grid.Column="2" Text="Add" TextColor="White" HorizontalOptions="Center" Clicked="Add_Clicked"/>
+
+            <Label Grid.Row="3" Grid.Column="0" Text="Gubbeen moulded salami" TextColor="White" HorizontalOptions="Center"/>
+            <Entry x:Name="Qub2"  Grid.Row="3" Grid.Column="1" TextColor="White" Placeholder="0" Text="{Binding Path=name, Mode=TwoWay}" HorizontalOptions="Center"/>
+            <Button x:Name="add2" BackgroundColor="Blue" Grid.Row="3" Grid.Column="2" Text="Add" TextColor="White" HorizontalOptions="Center" Clicked="Add2_Clicked"/>
+
+            <Label Grid.Row="4" Grid.Column="0" Text="Gubbeen  coppa" TextColor="White" HorizontalOptions="Center"/>
+            <Entry x:Name="Qub3"  Grid.Row="4" Grid.Column="1" TextColor="White" Placeholder="0" Text="{Binding Path=name, Mode=TwoWay}" HorizontalOptions="Center"/>
+            <Button x:Name="add3" BackgroundColor="Blue" Grid.Row="4" Grid.Column="2" Text="Add" TextColor="White" HorizontalOptions="Center" Clicked="Add3_Clicked"/>
+
+            <Label Grid.Row="5" Grid.Column="0" Text="Wine list" TextColor="White" HorizontalOptions="Center"/>
+            <Label Grid.Row="6" Grid.Column="0" Text="Edalo 2018 Bodegas Contreras Ruiz Zalema, Condado de Huelva, Spain  €28" TextColor="White" HorizontalOptions="Center"/>
+            <Entry x:Name="Qub4"  Grid.Row="6" Grid.Column="1" TextColor="White" Placeholder="0" Text="{Binding Path=name, Mode=TwoWay}" HorizontalOptions="Center"/>
+            <Button x:Name="add4" BackgroundColor="Blue" Grid.Row="6" Grid.Column="2" Text="Add" TextColor="White" HorizontalOptions="Center" Clicked="Add4_Clicked"/>
+
+            <Label Grid.Row="7" Grid.Column="0" Text="Val de Loire 'Lombeline' 2018 Domaine Emile Balland  Sauvignon Blanc, Loire, France €29" TextColor="White" HorizontalOptions="Center"/>
+            <Entry x:Name="Qub5"  Grid.Row="7" Grid.Column="1" TextColor="White" Placeholder="0" Text="{Binding Path=name, Mode=TwoWay}" HorizontalOptions="Center"/>
+            <Button x:Name="add5" BackgroundColor="Blue" Grid.Row="7" Grid.Column="2" Text="Add" TextColor="White" HorizontalOptions="Center" Clicked="Add5_Clicked"/>
+
+            <Label Grid.Row="8" Grid.Column="0" Text="Blanco de Hornillos 2017 Callejuela Palomino Fino, San Lucar de Barrameda, Spain €35)" TextColor="White" HorizontalOptions="Center"/>
+            <Entry x:Name="Qub7"  Grid.Row="8" Grid.Column="1" TextColor="White" Placeholder="0" Text="{Binding Path=name, Mode=TwoWay}" HorizontalOptions="Center"/>
+            <Button x:Name="add6" BackgroundColor="Blue" Grid.Row="8" Grid.Column="2" Text="Add" TextColor="White" HorizontalOptions="Center" Clicked="Add6_Clicked"/>
+
+            <!--in the last grid 9 
+                 its hold 3 button one back button to restaurants page
+                 and clearbutton to clear the Menu 
+                 and check button to DisplayAlert what the user has chose with total price-->
+            <Button x:Name="Back" Grid.Row="9" Grid.Column="0" BackgroundColor="Red" Text="Back" TextColor="White"
+                    Clicked="Back_Clicked"
+                    WidthRequest="200"
+                    HorizontalOptions="Center">
+            </Button>
+
+            <Button x:Name="clear" Grid.Row="9" Grid.Column="1" BackgroundColor="Green" Text="Clear" TextColor="White"
+                    Clicked="Clear_Clicked"
+                    WidthRequest="60"
+                    HorizontalOptions="Center">
+            </Button>
+
+            <Button x:Name="check" Grid.Row="9" Grid.Column="2" BackgroundColor="Blue" Text="Check" TextColor="White"
+                    Clicked="Check_Clicked"
+                        WidthRequest="60"
+                    HorizontalOptions="Center">
+            </Button>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

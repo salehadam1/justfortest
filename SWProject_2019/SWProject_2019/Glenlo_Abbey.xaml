@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SWProject_2019.Glenlo_Abbey"
+             BackgroundColor="Black">
+    <!--thi page for Glenlo Abbey hotel -->
+    <ContentPage.Content>
+        <!--creat 6 grid row and one colum  -->
+        <!--different height size for each grid row as each row hold different info -->
+        <!--one size of grid colum -->
+        <Grid x:Name="Glenlo"
+          HorizontalOptions="Center"
+          WidthRequest="300"
+               BackgroundColor="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition />
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <!--in this grid hold and image take for heading app -->
+            <Grid  Grid.Row="0" Grid.Column="0">
+                <Image  x:Name="stwieim" WidthRequest="300" HeightRequest="600" Source="Glenl.jpg">
+                    <!--  <Image.Source>
+                        <OnPlatform x:TypeArguments ="FileImageSource">
+                            <On Platform="UWP" Value="Images/Glenl.jpg" />
+                            <On Platform="Android" Value="Stewie.png" />  
+                        </OnPlatform>
+                    </Image.Source>-->
+                </Image>
+            </Grid>
+
+            <!--from grid row 1 (2) till grid row 5 (6) hold lable text about the hotel and some small menu that the user have to chose one of them-->
+            <Label x:Name="tex1" Grid.Row="1" Grid.Column="0" Text="Nestled peacefully on a stunning 138-acre estate on the edge of Ireland's largest lake, Lough Corrib" TextColor="White"/>
+            <Label x:Name="tex2" Grid.Row="2" Grid.Column="0" Text="Pleas chose one of the ID plane to get an offer calculator" TextColor="red"/>
+            <Label x:Name="tex3" Grid.Row="3" Grid.Column="0" Text="Id 1 for Grand Suites" TextColor="White"/>
+            <Label x:Name="tex4" Grid.Row="4" Grid.Column="0" Text="Id 2 for Corrib Deluxe" TextColor="White"/>
+            <Label x:Name="tex5" Grid.Row="5" Grid.Column="0" Text="Id 3 for Classic Bedrooms" TextColor="White"/>
+
+            <!--in the last grid-->
+            <!--the grid hold grid as well with 4(5) row and 2(1) colum-->
+            <!--hold three inupt box that the user have to input some info-->
+            <!--and button for the calculatoer the total price for the user-->
+            <!--at end of the app there is tow button one link to the hotel web and other to google map for the location of the hotel-->
+            <Grid   HorizontalOptions="Center" Grid.Row="6" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="ID :" TextColor="White" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="g_Id" TextColor="White" Placeholder="Enter Id plane" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Number of night :" TextColor="White" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="numOfnight" TextColor="White" Placeholder="How many Night" Grid.Row="1" Grid.Column="1"/>
+
+                <Label Text="Number of pepole :" TextColor="White" Grid.Row="2" Grid.Column="0"/>
+                <Entry x:Name="numOfpepole" TextColor="White" Placeholder="How many person" Grid.Row="2" Grid.Column="1"/>
+
+                <Button x:Name="gl_calculator" Text="Calculator" TextColor="White" 
+                        BackgroundColor="Blue"
+                        Grid.Row="3" Grid.Column="0"
+                        Clicked="Gl_calculator_Clicked"/>
+                <Label x:Name="g_Answer" TextColor="White" Grid.Row="3" Grid.Column="1"/>
+
+                <Button x:Name="gl_Holink" Text="Link to Hotel" TextColor="White" 
+                        BackgroundColor="Blue"
+                        Grid.Row="4" Grid.Column="0"
+                        Clicked="Gl_Holink_Clicked"/>
+                <Button x:Name="gl_Malink" Text="View in Mape" TextColor="White" 
+                        BackgroundColor="Blue"
+                        Grid.Row="4" Grid.Column="1"
+                        Clicked="Gl_Malink_Clicked"/>
+            </Grid>
+
+            <!--back button-->
+            <Button x:Name="back" Text="Back" TextColor="White" BackgroundColor="Red"
+                    Grid.Row="7" Grid.Column="0"
+                    Clicked="Back_Clicked"></Button>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

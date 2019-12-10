@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SWProject_2019.TheFront_Door"
+             BackgroundColor="Black">
+    <!--thi page for Front_Doo -->
+    <ContentPage.Content>
+        <!--creat 6 grid row and one colum  -->
+        <!--different height size for each grid row as each row hold different info -->
+        <!--one size of grid colum -->
+        <Grid x:Name="Gakway_Bar2"
+          HorizontalOptions="Center"
+          WidthRequest="300"
+              Margin="5,5,5,5"
+               BackgroundColor="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <!--in this grid hold and image take for heading app -->
+            <Grid  Grid.Row="0" Grid.Column="0">
+                <Image  x:Name="stwieim" WidthRequest="300" HeightRequest="600" Source="Door.jpg">
+                    <!--   <Image.Source>
+                        <OnPlatform x:TypeArguments ="FileImageSource">
+                            <On Platform="UWP" Value="Images/Door.jpg" />
+                             <On Platform="Android" Value="Stewie.png" />  
+                        </OnPlatform>
+                    </Image.Source> -->
+                </Image>
+            </Grid>
+
+            <!--from grid row 1 (2) till grid row 5 (6) hold lable text about the hotel and some small menu that the user have to chose one of them-->
+            <Label x:Name="tex1" Grid.Row="1" Grid.Column="0" Text="At the centre of Galway's social scene, The Front Door is one of the city's most iconic pubs." TextColor="White"/>
+            <Label x:Name="tex2" Grid.Row="2" Grid.Column="0" Text="Spread over two floors and stretching across two streets." TextColor="White"/>
+            <Label x:Name="tex3" Grid.Row="3" Grid.Column="0" Text="this lively pub promises to give you an experience, as well as the finest pint in the city." TextColor="White"/>
+            <Label x:Name="tex4" Grid.Row="4" Grid.Column="0" Text="it's located in the heart of The Latin Quarter and also incorporates Sonny Molloy's Whiskey Bar on High Street." TextColor="White"/>
+            <Button x:Name="galway_door" Grid.Row="5" Grid.Column="0" Text="link to map" TextColor="White" Clicked="Galway_door_Clicked" BackgroundColor="Blue"/>
+
+            <!--back button-->
+            <Button x:Name="back" Text="Back" TextColor="White" BackgroundColor="Red"
+                    Grid.Row="6" Grid.Column="0"
+                    Clicked="Back_Clicked"></Button>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

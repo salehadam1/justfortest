@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SWProject_2019.aniar_Restaurant"
+             BackgroundColor="Black">
+    <!--thi page for Ard Bia at Nimmos-->
+    <ContentPage.Content>
+        <!--creat 7 grid row and one colum  -->
+        <!--different height size for each grid row as each row hold different info -->
+        <!--one size of grid colum -->
+        <Grid x:Name="aniar_Rest"
+          HorizontalOptions="Center"
+          WidthRequest="300"
+              Margin="5,5,5,5"
+               BackgroundColor="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <!--in this grid hold and image take for heading app -->
+            <Grid  Grid.Row="0" Grid.Column="0">
+                <Image  x:Name="stwieim" WidthRequest="300" HeightRequest="600" Source="Aniar_Rest.jpg">
+                    <!-- <Image.Source>
+                        <OnPlatform x:TypeArguments ="FileImageSource">
+                            <On Platform="UWP" Value="Images/Aniar_Rest.jpg" />
+                             <On Platform="Android" Value="Stewie.png" />  
+                        </OnPlatform>
+                    </Image.Source>-->
+                </Image>
+            </Grid>
+
+            <!--from grid row 1  till grid row 4  hold lable text about the Restaurants-->
+            <Label x:Name="tex1" Grid.Row="1" Grid.Column="0" Text="Aniar is a Michelin Starred restaurant located in Galway's West End." TextColor="White"/>
+            <Label x:Name="tex2" Grid.Row="2" Grid.Column="0" Text="Our food comes from the specific place that is the west of Ireland." TextColor="White"/>
+            <Label x:Name="tex3" Grid.Row="3" Grid.Column="0" Text="We hope to reveal the distinct and various food stuffs that make up our particular landscape, through our farms." TextColor="White"/>
+            <Label x:Name="tex4" Grid.Row="4" Grid.Column="0" Text=" the wildlands and the shores that surround us." TextColor="White"/>
+            <!--link button to the Restaurants web-->
+            <Button x:Name="Anir_Menu" Grid.Row="5" Grid.Column="0" Text="Check Menu" TextColor="White" Clicked="Anir_Menu_Clicked" BackgroundColor="Blue"/>
+            <!--link button to the Restaurants-->
+            <Button x:Name="Anir_link" Grid.Row="6" Grid.Column="0" Text="link to Restaurant" TextColor="White" Clicked="Anir_link_Clicked" BackgroundColor="Blue"/>
+            <!--back button-->
+            <Button x:Name="Back" Grid.Row="7" Grid.Column="0" Text="Back" TextColor="White" BackgroundColor="Red" Clicked="Back_Clicked"></Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

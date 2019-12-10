@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SWProject_2019.Loam_Rest"
+             BackgroundColor="Black">
+    <!--thi page for Loam Restaurrant-->
+    <ContentPage.Content>
+        <!--creat 7 grid row and one colum  -->
+        <!--different height size for each grid row as each row hold different info -->
+        <!--one size of grid colum -->
+        <Grid x:Name="Loam"
+          HorizontalOptions="Center"
+          WidthRequest="300"
+              Margin="5,5,5,5"
+               BackgroundColor="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <!--in this grid hold and image take for heading app -->
+            <Grid  Grid.Row="0" Grid.Column="0">
+                <Image  x:Name="stwieim" WidthRequest="300" HeightRequest="600" Source="Loam_Rest.jpg">
+                    <!-- <Image.Source>
+                        <OnPlatform x:TypeArguments ="FileImageSource">
+                            <On Platform="UWP" Value="Images/Loam_Rest.jpg" />
+                             <On Platform="Android" Value="Stewie.png" />  
+                        </OnPlatform>
+                    </Image.Source> -->
+                </Image>
+            </Grid>
+
+            <!--from grid row 1  till grid row 4  hold lable text about the Restaurants-->
+            <Label x:Name="tex1" Grid.Row="1" Grid.Column="0" Text="Loam is a Michelin-starred restaurant and wine bar located just off Eyre Square in Galway city." TextColor="White"/>
+            <Label x:Name="tex2" Grid.Row="2" Grid.Column="0" Text="It first opened its doors in November 2014 and is owned and run by Head Chef Enda McEvoy." TextColor="White"/>
+            <Label x:Name="tex3" Grid.Row="3" Grid.Column="0" Text="In May 2019, we took the top accolade at the prestigious" TextColor="White"/>
+            <Label x:Name="tex4" Grid.Row="4" Grid.Column="0" Text="Restaurants Association of Ireland Awards when Loam was voted 'Best Restaurant in Ireland' 2019." TextColor="White"/>
+            <!--link button to the Restaurants web-->
+            <Button x:Name="loam_Menu" Grid.Row="5" Grid.Column="0" Text="Check Menu" TextColor="White" Clicked="Loam_Menu_Clicked" BackgroundColor="Blue"/>
+            <!--link button to the Restaurants-->
+            <Button x:Name="loam_link" Grid.Row="6" Grid.Column="0" Text="link to Restaurant" TextColor="White" Clicked="Loam_link_Clicked" BackgroundColor="Blue"/>
+            <!--back button-->
+            <Button x:Name="Back" Grid.Row="7" Grid.Column="0" Text="Back" TextColor="White" BackgroundColor="Red" Clicked="Back_Clicked"></Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
